@@ -1,0 +1,110 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-sm-4" text-center>
+      <h3>Habilidades</h3>
+    </div>
+    <div class="col-sm-12">
+      <br>
+      <i class="fa-solid fa-trash"></i>
+      <i class="fa-solid fa-pencil" data-bs-toggle="modal" data-bs-target="#HabilidadesModal"></i>
+    </div>
+  </div>
+
+
+
+
+  <button (click)="Nuevo()" class="btn agregar"><i
+    class="fas fa-edit"></i>AGREGAR</button>
+
+  <div class="row" *ngFor="let skill of skills">
+    <div class="col-8 d-flex justify-content-center">
+      <picture>
+        <img oncontextmenu="return false;" class="img-fluid rounded-circle" src="{{skill.img}}" alt="la imagen de pawli no cargan"
+          id="perfil" />
+      </picture>
+      <h2 class="row d-flex justify-content-center">{{skill.nombre}} {{skill.progress}}</h2>
+    </div>
+
+    <div class="row">
+      <span class="d-flex justify-content-center"><button (click)="Editar(skill)" class="btn editar"><i
+            class="fas fa-edit"></i>editar</button></span>
+    </div>
+  </div> -->
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-8 titulo">
+      <h1>Tecnologías</h1>
+    </div>
+    <div class="col-4 justify-content-center"><button (click)="Nuevo()" class="btn agregar"><i
+          class="far fa-plus-square"></i></button></div>
+  </div>
+  <button class="btn borrar" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-trash"></i></button>
+
+
+
+  <!-- Muestro las skills y las imagenes de los lenguajes / tecnologias -->
+
+
+  <div *ngFor="let skill of skills" class="container">
+    <div class="row">
+      <div class="col">
+        <circle-progress [percent]="skill.progress" [radius]="100" [imageSrc]="'../assets/imagen_html.png'"
+          [showImage]="true" [imageHeight]="90" [imageWidth]="90" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
+          [outerStrokeColor]="'rgb(36,0,32)'" [innerStrokeColor]="'rgba(222,0,255,1)'" [animation]="true"
+          [animationDuration]="200">
+        </circle-progress>
+      </div>
+    </div>
+    <span class="header">
+      <h3> {{skill.nombre}} </h3>
+    </span>
+    <span class="body">
+
+      <picture>
+        <img src="{{skill.img}}" alt="Logos" id="logos" accept="image/*" />
+      </picture>
+    </span>
+    <span class="footer">
+      <button (click)="Editar(skill)" class="btn editar"><i class="fas fa-edit"></i></button>
+
+    </span>
+  </div>
+
+
+
+  <!-- Muestro las skills y las imagenes de los lenguajes / tecnologias -->
+
+
+
+
+
+  <!-- MODAL DE ELIMINAR -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Eliminar Skill</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer" *ngFor="let skill of skills">
+          <picture>
+            <img src="{{skill.img}}" alt="Logos" id="logos" accept="image/*" />
+          </picture>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+          <button (click)="Delete(skill)" class="btn btn-warning borrar">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- MODAL DE ELIMINAR -->

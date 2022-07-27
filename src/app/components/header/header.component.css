@@ -1,0 +1,45 @@
+div {
+    background-color: rosybrown;
+}
+
+#LogoAP{
+    width: 90px;
+}
+
+
+i{
+    float:right;
+    max-width:20px;
+    max-height: 20px;
+}
+
+.img{height: 90vh;
+}
+
+.SocialLink{
+  margin-right: 30px;
+  color: white;
+}
+
+.SocialGit {
+    margin-right: 30px;
+    color:white;
+}
+
+.SocialDiscord{
+    margin-right: 30px;
+    color: white;
+}
+
+h1{
+    text-align: center;
+}
+
+a,a:link,a:visited{
+    color: black;
+}
+a:hover{
+    color:rgb(247,222,221);
+    background-color: rosybrown;
+}
+

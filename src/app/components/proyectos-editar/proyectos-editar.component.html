@@ -1,0 +1,30 @@
+<div class="container text-center d-flex justify-content-center">
+    <div class="row">
+      <div class="col">
+        <form action="">
+          <div class="row">
+            <div class="form-group">
+              <label for="">Nombre:</label>
+              <input [(ngModel)]="proyecto.nombre" name="nombre" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Progress:</label>
+              <input [(ngModel)]="proyecto.url" name="url" type="number" class="form-control" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Progress:</label>
+              <input [(ngModel)]="proyecto.desempenio" name="desempenio" type="number" class="form-control" />
+            </div>
+          </div>
+         
+
+          <button (click)="Actualizar(proyecto)" class="btn btn-danger">Actualizar</button>
+        </form>
+      </div>
+    </div>
+  </div> 
+

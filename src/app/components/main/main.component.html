@@ -1,0 +1,54 @@
+<!-- Este es mi primer trabajo SOLA -->
+
+
+<app-header></app-header>
+
+
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <div class="col-sm-4" text-center>
+        <h3 class="card-title">Sobre mi</h3>
+      </div>
+      <label>Nombre : Paula T.</label>
+      <br>
+      <label>Apellido : Gonzalez</label>
+      <br>
+      <label>Titulo : Full Stack Junior</label>
+      <br>
+      <label>Fecha de nacimiento : 14/01/1995 </label>
+      <br>
+      <i class="fa-solid fa-trash"> </i>
+      <i class="fa-solid fa-pencil" data-bs-toggle="modal" data-bs-target="#SobreMiModal"></i>
+    </div>
+  </div>
+</div>
+
+<app-modales></app-modales>
+<app-educacion></app-educacion>
+<app-experiencia></app-experiencia>
+<app-proyectos></app-proyectos>
+<app-hys></app-hys>
+<app-footer></app-footer>
+
+
+
+<!-- HTML PARA INTERPOLAR MOSTRAR EN EL FRONT)PERSONA -->
+
+
+
+<!-- <div class="row" *ngFor="let persona of personas">
+  <div class="col-8 d-flex justify-content-center">
+    <picture>
+      <img oncontextmenu="return false;" class="img-fluid rounded-circle" src="{{persona.img}}" alt="cargando imagen"
+        id="perfil" />
+    </picture>
+  </div>
+
+  <div class="row">
+    <span class="d-flex justify-content-center"><button (click)="Editar(persona)" class="btn editar"><i
+          class="fas fa-edit"></i>editar</button></span>
+  </div>
+
+  <h2 class="row d-flex justify-content-center">{{persona.nombre}} {{persona.apellido}}</h2>
+</div> -->

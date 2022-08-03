@@ -10,19 +10,20 @@
           </div>
           <div class="row">
             <div class="form-group">
-              <label for="">Progress %</label>
-              <input [(ngModel)]="proyecto.url" name="url" type="number" class="form-control">
+              <label for="">URL </label>
+              <input [(ngModel)]="proyecto.url" name="url" type="text" class="form-control">
             </div>
           </div>
           <div class="row">
             <div class="form-group">
-              <label for="">Progress %</label>
-              <input [(ngModel)]="proyecto.desempenio" name="desempenio" type="number" class="form-control">
+              <label for="">Desempenio</label>
+              <input [(ngModel)]="proyecto.desempenio" name="desempenio" type="text" class="form-control">
             </div>
           </div>
 
 
           <span style="margin: 10px;"><button (click)="Guardar()" class="btn btn-danger">Guardar</button></span>
+          <button (click)="Cancel()" class="btn btn-secondary">Cancelar</button>
         </form>
       </div>
     </div>

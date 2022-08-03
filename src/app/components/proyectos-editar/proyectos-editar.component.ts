@@ -34,4 +34,7 @@ export class ProyectosEditarComponent implements OnInit {
         window.location.reload();
       })
   }
+  Cancel() {
+    this.route.navigate(['home'])
+  }
 }

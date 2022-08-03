@@ -18,8 +18,8 @@ export class HysAddComponent implements OnInit {
   }
 
   Guardar() {
-    this.service.createSkill(this.skill).subscribe(data => { });
-    this.route.navigate[('home')];
+    this.service.createSkill(this.skill).subscribe(data => { this.skill=data});
+    this.route.navigate(['home']);
   }
 
   obtener(e: any) {

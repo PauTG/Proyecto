@@ -12,7 +12,7 @@ export class MainComponent implements OnInit {
 
   personas: Persona[] = [];
  
-
+  persona: Persona = new Persona (0, "", "", "", "");
 
 
 
@@ -22,15 +22,22 @@ export class MainComponent implements OnInit {
       .subscribe(data => {
         this.personas = data;
       })
-    
-    
   }
   
   
 
   Editar(persona: Persona): void {
     localStorage.setItem("id", persona.id.toString());
+    this.router.navigate(['editar'])
   }
+
+
+  Agregar() {
+    this.router.navigate(['add'])
+}
+
+
+
 
   Delete(persona: Persona) {
     this.service.deletePersona(persona)

@@ -12,7 +12,7 @@ export class ExperienciaService {
 
   Url='http://localhost:8080/experiencias';
 
-    getExperencia(){
+    getExperiencia(){
       return this.http.get<Experiencia[]>(this.Url+'/traer');
   }
   createExperiencia(experiencia:Experiencia){

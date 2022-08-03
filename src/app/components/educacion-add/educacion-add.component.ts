@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Estudio } from 'src/app/Modelos/Estudio';
+import { EstudioService } from 'src/app/Servicios/estudio.service';
 
 @Component({
   selector: 'app-educacion-add',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducacionAddComponent implements OnInit {
 
-  constructor() { }
+  estudio: Estudio = new Estudio(0, "", "", "");
+
+  constructor(private route: Router, private service: EstudioService) { }
 
   ngOnInit(): void {
   }
 
+  Guardar() {
+    this.service.createEstudio(this.estudio).subscribe(data => { this.estudio=data});
+    this.route.navigate(['home']);
+  }
+
+
+  Cancel() {
+    this.route.navigate(['home'])
+  }
 }

@@ -40,6 +40,4 @@ skill: Skill = new Skill(0,"",0,"");
         this.skills = this.skills.filter(p => p !== skill);
       })
   }
-
-
 }

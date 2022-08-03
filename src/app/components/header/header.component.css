@@ -43,3 +43,7 @@ a:hover{
     background-color: rosybrown;
 }
 
+.carousel-inner {
+        border:solid 5px; color: rosybrown;
+}
+

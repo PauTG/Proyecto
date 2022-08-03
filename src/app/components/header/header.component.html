@@ -1,71 +1,77 @@
 <body>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rosybrown;">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../../../assets/AP-logo.png" id="LogoAP"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class= "collapse navbar-collapse" id="navbarGeneral">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="Menu nav-link active" aria-current="page" href="#">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#"> Sobre mi </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Antecedentes laborales</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                               Aika
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Sobre Aika</a></li>
-                                <li><a class="dropdown-item" href="#">Que le gusta a Aika</a></li>
-                                <li><a class="dropdown-item" href="#">Que odia Aika</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <a href="https://www.linkedin.com/in/paulatg/"><i class="SocialLink fab fa-linkedin fa-2x"></i></a>
-                <a href="https://github.com/PauTG"><i class="SocialGit fa-brands fa-github fa-2x"></i></a>
-                <a href="https://discord.gg/4ew6gcVXFt"><i class="SocialDiscord fa-brands fa-discord fa-2x"></i></a>
-               
-            </div> 
-        </nav>
- 
-    
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../../../assets/WhatsApp Image 2021-06-01 at 23.08.59.jpeg" class="d-block w-100 img" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../../../assets/WhatsApp Image 2021-06-01 at 23.08.59.jpeg" class="d-block w-100 img" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../../../assets/WhatsApp Image 2021-06-01 at 23.08.59.jpeg" class="d-block w-100 img" alt="...">
-          </div>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rosybrown;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://argentinaprograma.inti.gob.ar/"><img src="../../../assets/AP-logo.png"
+            id="LogoAP"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarGeneral">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="Menu nav-link active" aria-current="page" href="#">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"> Sobre mi </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Aika
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Sobre Aika</a></li>
+                <li><a class="dropdown-item" href="#">Que le gusta a Aika</a></li>
+                <li><a class="dropdown-item" href="#">Que odia Aika</a></li>
+
+
+              </ul>
+            </li>
+          </ul>
+          <button (click)=LogOut() *ngIf="this.token != undefined; else elseBlocked " class="btn btn-primary"> LogOut
+          </button>
+          <ng-template #elseBlocked><button class="btn btn-primary" [routerLink]="['/', 'Login']"> LogIn </button>
+          </ng-template>
+
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <a href="https://www.linkedin.com/in/paulatg/"><i class="SocialLink fab fa-linkedin fa-2x"></i></a>
+        <a href="https://github.com/PauTG"><i class="SocialGit fa-brands fa-github fa-2x"></i></a>
+        <a href="https://discord.gg/4ew6gcVXFt"><i class="SocialDiscord fa-brands fa-discord fa-2x"></i></a>
+
       </div>
-    </header>
-    
-             <h1>¡Bienvenidos a mi portafolio! </h1>
-  
-  </body>
+    </nav>
 
 
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./../../../assets/portafolio1.png" class="d-block w-100 img" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../../../assets/portafolio2.png" class="d-block w-100 img" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../../../assets/portafolio3.png" class="d-block w-100 img" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </header>
+
+  <h1>¡Bienvenidos a mi portafolio! </h1>
+
+</body>

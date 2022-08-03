@@ -1,1 +1,38 @@
-<p>editar works!</p>
+<!-- HTML DE BOTON DE EDITAR -->
+
+
+<div class="container text-center d-flex justify-content-center">
+  <div class="row">
+    <div class="col">
+      <form action="">
+        <div class="row">
+          <div class="form-group">
+            <label for="">Titulo:</label>
+            <input [(ngModel)]="persona.titulo" name="titulo" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label for="">Nombre:</label>
+            <input [(ngModel)]="persona.nombre" name="nombre" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label for="">Apellido:</label>
+            <input [(ngModel)]="persona.apellido" name="apellido" type="text" class="form-control" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label for="">Imagen:</label>
+            <input type="file" accept="image/*" alife-file-to-base64 (onFileChanged)="obtener($event)" name="img"
+              class="form-control">
+          </div>
+        </div>
+        <button (click)="Actualizar(persona)" class="btn btn-danger">Actualizar</button>
+        <button (click)="Cancel()" class="btn btn-secondary">CANCELAR</button>
+      </form>
+    </div>
+  </div>
+</div>

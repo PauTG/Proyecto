@@ -1,0 +1,23 @@
+.experiencita {
+    color: black;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin-left: 15px;
+}
+
+
+
+p {
+    text-align: center;
+    color: black;
+    font-size: large;
+}
+
+.col-sm-4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

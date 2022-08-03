@@ -19,7 +19,9 @@ export class ProyectosAddComponent implements OnInit {
 
   Guardar() {
     this.service.createProyecto(this.proyecto).subscribe(data => {});
-    window.location.reload();
     this.route.navigate[('home')];
+  }
+  Cancel() {
+    this.route.navigate(['home'])
   }
 }

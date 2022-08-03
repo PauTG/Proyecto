@@ -1,1 +1,31 @@
-<p>educacion-edit works!</p>
+<!-- HTML DE BOTON DE EDITAR -->
+
+
+<div class="container text-center d-flex justify-content-center">
+    <div class="row">
+      <div class="col">
+        <form action="">
+          <div class="row">
+            <div class="form-group">
+              <label for="">Nombre:</label>
+              <input [(ngModel)]="estudio.nombre" name="nombre" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Progress:</label>
+              <input [(ngModel)]="estudio.puesto" name="puesto" type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Fecha:</label>
+              <input [(ngModel)]="estudio.fecha" name="fecha" type="text" class="form-control" />
+            </div>
+          </div>
+          <button (click)="Actualizar(estudio)" class="btn btn-danger">Actualizar</button>
+          <button (click)="Cancel()" class="btn btn-secondary" >CANCELAR</button>
+        </form>
+      </div>
+    </div>
+  </div> 

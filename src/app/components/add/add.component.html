@@ -1,1 +1,37 @@
-<p>add works!</p>
+<!-- HTML DE BOTON DE AGREGAR -->
+
+<div class="container text-center d-flex justify-content-center">
+    <div class="row">
+      <div class="col">
+        <form action="">
+            <div class="row">
+                <div class="form-group">
+                  <label for="">Titulo:</label>
+                  <input [(ngModel)]="persona.titulo" name="titulo" type="text" class="form-control">
+                </div>
+              </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Nombres:</label>
+              <input [(ngModel)]="persona.nombre" name="nombre" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Apellido:</label>
+              <input [(ngModel)]="persona.apellido" name="apellido" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Img:</label>
+              <input [(ngModel)]="persona.img" type="file" accept="image/*" alife-file-to-base64
+                (onFileChanged)="obtener($event)" name="img" class="form-control">
+            </div>
+          </div>
+          <span style="margin: 10px;"><button (click)="Guardar()" class="btn btn-danger">Guardar</button>
+            <button (click)="Cancel()" class="btn btn-secondary">Cancelar</button></span>
+        </form>
+      </div>
+    </div>
+  </div>

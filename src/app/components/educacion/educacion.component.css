@@ -1,0 +1,27 @@
+.education {
+    color: black;
+    text-align: center;
+    }
+    h3 {
+        text-align: center;
+        border-bottom: 1px solid black;
+     }
+
+
+     p {
+  display: block;
+    color: black;
+    font-size:large;
+    } */
+    
+.col-sm-4{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.buton {
+    text-align: end;
+    justify-content: flex-start;
+
+}

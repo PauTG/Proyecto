@@ -1,4 +1,28 @@
-.card {
+
+
+
+.tecno {
+    color: black;
+}
+
+.header{
+    text-align: center;
+    color:black;
+}
+
+.bot {
+    align-items: flex-end;
+}
+
+
+
+
+
+
+
+
+
+/* .card {
     border: solid 0;
     border-radius: 0;
     font-size: large;
@@ -42,4 +66,4 @@ h3{
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
-}
+} */

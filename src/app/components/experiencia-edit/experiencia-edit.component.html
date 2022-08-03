@@ -1,1 +1,31 @@
-<p>experiencia-edit works!</p>
+<div class="container text-center d-flex justify-content-center">
+    <div class="row">
+      <div class="col">
+        <form action="">
+          <div class="row">
+            <div class="form-group">
+              <label for="">Establecimiento</label>
+              <input [(ngModel)]="experiencia.establecimiento" name="establecimiento" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Logro</label>
+              <input [(ngModel)]="experiencia.logro" name="logro" type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Fecha</label>
+              <input [(ngModel)]="experiencia.fecha" name="fecha" type="text" class="form-control" />
+            </div>
+          </div>
+         
+
+          <button (click)="Actualizar(experiencia)" class="btn btn-danger">Actualizar</button>
+          <button (click)="Cancel()" class="btn btn-primary"> Cancelar </button>
+        </form>
+      </div>
+    </div>
+  </div> 
+

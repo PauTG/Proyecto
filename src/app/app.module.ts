@@ -1,15 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './components/header/header.component' ;
 import { MainComponent } from './components/main/main.component';
-import { LogoApComponent } from './components/logo-ap/logo-ap.component';
-import { SocialComponent } from './components/social/social.component';
-import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
-import { ModalesComponent } from './components/modales/modales.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HysComponent } from './components/hys/hys.component';
 import{ HttpClientModule} from '@angular/common/http'
@@ -28,8 +23,16 @@ import { EditarComponent } from './components/editar/editar.component';
 import { HysAddComponent } from './components/hys-add/hys-add.component';
 import { HysEditComponent } from './components/hys-edit/hys-edit.component';
 import { AlifeFileToBase64Module } from 'alife-file-to-base64';
-
-
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegistroComponent } from './auth/registro/registro.component'
+import { LoginComponent} from './auth/login/login.component'
+import { EstudioService } from './Servicios/estudio.service';
+import { ExperienciaService } from './Servicios/experiencia.service';
+import { PersonaService } from './Servicios/persona.service';
+import { ProyectosService } from './Servicios/proyectos.service';
+import { SkillService } from './Servicios/skill.service';
+import { interceptorProvider } from './interceptors/persona-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -37,10 +40,6 @@ import { AlifeFileToBase64Module } from 'alife-file-to-base64';
     FooterComponent,
     HeaderComponent,
     MainComponent,
-    LogoApComponent,
-    SocialComponent,
-    AcercaDeComponent,
-    ModalesComponent,
     HysComponent,
     ProyectosComponent,
     EducacionComponent,
@@ -55,6 +54,12 @@ import { AlifeFileToBase64Module } from 'alife-file-to-base64';
     EditarComponent,
     HysAddComponent,
     HysEditComponent,
+    LoginComponent,
+    RegistroComponent,
+
+
+    
+
   ],
   imports: [
     BrowserModule,
@@ -62,9 +67,11 @@ import { AlifeFileToBase64Module } from 'alife-file-to-base64';
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     FormsModule,
-    AlifeFileToBase64Module    
+    AlifeFileToBase64Module,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [EstudioService, ExperienciaService, PersonaService, ProyectosService, SkillService, interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

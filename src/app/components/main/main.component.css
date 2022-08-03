@@ -1,45 +1,38 @@
-.card {
-    border: solid 0;
-    border-radius: 0;
-    font-size: large;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='74.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23FFADBF' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23feaec2' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23fcaec6' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23faafc9' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23f9b0cc' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23f7b1cf' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23f5b2d2' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23f3b3d5' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23f0b4d8' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23eeb6da' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23ebb7dd' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23e9b8df' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23e6b9e1' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23e4bae3' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23e1bbe5' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23debde6' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23dcbee8' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23D9BFE9' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover;
-}
-
+/* 
 i {
 float: right;
 margin-right: 15px;
-}
-
+} */
+/* 
 p{
     text-align: center;
     color: black;
     font-size:large;
-}
+} */
 
-h5 {
+/* h5 {
    text-align: center;
-   border-bottom: 1px solid blueviolet;
-}
+   border-bottom: 1px solid black;
+} */
 
 h3{
     text-align: center;
-    border-bottom: 1px solid blueviolet;
+    border-bottom: 1px solid black;
 }
 
-.container{
+/* .container{
     margin-top: 10px;
-}
+} */
 
-.col-sm-4{
+ /* .col-sm-4{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}  */
+
+.cardito{
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-.card{
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}

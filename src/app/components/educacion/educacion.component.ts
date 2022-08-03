@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Estudio } from 'src/app/Modelos/Estudio';
+import { EstudioService } from 'src/app/Servicios/estudio.service';
 
 @Component({
   selector: 'app-educacion',
@@ -7,9 +10,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducacionComponent implements OnInit {
 
-  constructor() { }
+  estudios: Estudio[] = [];
+  estudio: Estudio = new Estudio (0, "", "", ""); 
+
+  constructor( private route: Router, private service: EstudioService) { }
 
   ngOnInit(): void {
-  }
+ this.service.getEstudio()
+ .subscribe(data => { 
+  this.estudios = data
+  ;
+  })
+}
+
+Nuevo() {
+this.route.navigate (['educacion-add'])
 
 }
+
+Editar (estudio: Estudio): void {
+localStorage.setItem("id", estudio.id.toString());
+this.route.navigate (['estudio-edit'])
+}
+  
+Delete (estudio: Estudio){
+this.service.deleteEstudio(estudio)
+.subscribe(data => {
+  this.estudios = this.estudios.filter (p => p !== estudio);
+})
+}
+}
+
+
+

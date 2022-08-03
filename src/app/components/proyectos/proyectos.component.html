@@ -1,17 +1,63 @@
-<div class="container">
+<div class="container proyectito">
   <div class="row">
-    <div class="col-sm-12" text-center>
-      <h3>PROYECTOS</h3>
+    <div class="col-8 titulo">
+      <h1>Proyectos</h1>
     </div>
-    <div class="col-sm-12">
-      <br>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis maxime tenetur vero dolorem ad dolore
-        fuga
-        modi vitae doloribus placeat corrupti obcaecati reiciendis sunt inventore expedita itaque maiores, vel
-        dolores!
-      </p>
-      <i class="fa-solid fa-trash"></i>
-      <i class="fa-solid fa-pencil" data-bs-toggle="modal" data-bs-target="#EducacionModal"></i>
+    <div class="col-4 justify-content-center"><button (click)="Nuevo()" class="btn agregar">
+        <i class="far fa-plus-square"></i></button></div>
+  </div>
+  <button class="btn borrar" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-trash"></i></button>
+
+
+
+  <!-- Muestro las skills y las imagenes de los lenguajes / tecnologias -->
+
+
+  <div *ngFor="let proyecto of proyectos" class="proyectito">
+    <div class="row">
+      <div class="col">
+        <p>{{proyecto.nombre}}</p>
+      </div>
+    </div>
+    <span class="header">
+      <h3> {{proyecto.desempenio}} </h3>
+    </span>
+    <span class="body">
+      <p>{{proyecto.url}}</p>
+    </span>
+    <span class="footer">
+      <button (click)="Editar(proyecto)" class="btn editar"><i class="fas fa-edit"></i></button>
+    </span>
+  </div>
+
+
+
+  <!-- Muestro las skills y las imagenes de los lenguajes / tecnologias -->
+
+
+
+
+
+  <!-- MODAL DE ELIMINAR -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Eliminar Skill</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer" *ngFor="let proyecto of proyectos">
+          <p>{{proyecto.url}}</p>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+          <button (click)="Delete(proyecto)" class="btn btn-warning borrar">Eliminar</button>
+        </div>
+      </div>
     </div>
   </div>
+
 </div>
+
+
+
+<!-- MODAL DE ELIMINAR -->

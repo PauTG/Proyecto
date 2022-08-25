@@ -1,6 +1,4 @@
-div {
-    background-color: rosybrown;
-}
+
 
 #LogoAP{
     width: 90px;
@@ -8,13 +6,13 @@ div {
 
 
 i{
-    float:right;
+    float: right;
     max-width:20px;
     max-height: 20px;
 }
 
-.img{height: 90vh;
-}
+/* .img{height: 90vh;
+} */
 
 .SocialLink{
   margin-right: 30px;
@@ -44,6 +42,29 @@ a:hover{
 }
 
 .carousel-inner {
-        border:solid 5px; color: rosybrown;
+        border-radius: 70%; 
+        /* color: rosybrown ; */
 }
 
+.fonti {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+}
+
+
+.navbar {
+    border-radius: 40%;
+
+}
+
+.loginazo {
+ height: 35px;
+ margin-right: 20px;
+ color: white;
+ background-color: #C9A0A0;
+ border-color: #FBC3BC;
+ -o-border-image: auto; }
+
+ .navcolor {
+    column-rule-color: white;
+ }

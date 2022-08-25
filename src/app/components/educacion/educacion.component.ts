@@ -23,14 +23,15 @@ export class EducacionComponent implements OnInit {
   })
 }
 
-Nuevo() {
-this.route.navigate (['educacion-add'])
-
-}
 
 Editar (estudio: Estudio): void {
 localStorage.setItem("id", estudio.id.toString());
 this.route.navigate (['estudio-edit'])
+}
+
+
+Agregar() {
+  this.route.navigate(['educacion-add'])
 }
   
 Delete (estudio: Estudio){

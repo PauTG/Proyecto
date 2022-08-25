@@ -1,19 +1,19 @@
 export class Estudio {
     id: number;
-    nombre: String;
+    establecimiento: String;
     puesto: String;
-    fecha: String;
+    logro: String;
    
 
 
-    constructor(id: number, nombre: String,
+    constructor(id: number, establecimiento: String,
        puesto: String,
-        fecha: String) {
+       logro: String) {
 
         this.id = id;
-        this.nombre = nombre;
+        this.establecimiento = establecimiento;
         this.puesto = puesto;
-        this.fecha = fecha;
+        this.logro = logro;
        
     }
 }

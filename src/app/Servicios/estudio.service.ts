@@ -11,7 +11,7 @@ export class EstudioService {
  
   constructor(private http:HttpClient) { }
 
-  Url='http://localhost:8080/estudios';
+  Url='https://paulag.herokuapp.com/estudios';
 
     getEstudio(){
       return this.http.get<Estudio[]>(this.Url+'/traer');

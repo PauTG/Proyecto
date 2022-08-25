@@ -3,10 +3,12 @@
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
+    /* padding: 10px; */
 }
-h5 {
+h1 {
     text-align: center;
-    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    margin-left: 15px;
 
  }
 
@@ -15,4 +17,20 @@ h5 {
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
+   
+}
+
+.buton {
+    text-align: right;
+}
+
+
+.col-sm-4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+p {
+line-height: normal;
+padding: 20px;
+margin: 10px;
 }

@@ -1,10 +1,15 @@
-.education {
+/* .education {
     color: black;
     text-align: center;
-    }
-    h3 {
-        text-align: center;
-        border-bottom: 1px solid black;
+    } */
+
+
+
+    h2 {
+    text-align: left;
+    color: black;
+    margin-left: 15px;
+
      }
 
 
@@ -12,16 +17,33 @@
   display: block;
     color: black;
     font-size:large;
-    } */
+    text-align: right;
+    }
     
 .col-sm-4{
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px 0px;
+
+    /* margin-bottom: 15px; */
+    padding: 0px 12px;
+
+}
+
+.col-sm-8 {
+    padding: 0px 12px;
 }
 
 .buton {
     text-align: end;
     justify-content: flex-start;
 
+}
+
+.proyectito2 {
+    text-align: left;
+}
+
+.rowcito {
+    margin: 0px 12px;
+    padding: 12px;
 }

@@ -9,8 +9,7 @@ export class PersonaService {
 
   constructor(private http:HttpClient) { }
 
-  Url='http://localhost:8080/personas';
-    URL='https://porfolioargentino.herokuapp.com/personas';
+  Url='https://paulag.herokuapp.com/personas';
 
     getPersona(){
       return this.http.get<Persona[]>(this.Url+'/traer');

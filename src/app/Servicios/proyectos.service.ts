@@ -9,7 +9,7 @@ export class ProyectosService {
 
   constructor(private http:HttpClient) { }
 
-  Url='http://localhost:8080/proyectos';
+  Url='https://paulag.herokuapp.com/proyectos';
    
 
     getProyecto(){

@@ -28,12 +28,12 @@ export class MainComponent implements OnInit {
 
   Editar(persona: Persona): void {
     localStorage.setItem("id", persona.id.toString());
-    this.router.navigate(['editar'])
+    this.router.navigate(["editar"])
   }
 
 
   Agregar() {
-    this.router.navigate(['add'])
+    this.router.navigate(["add"])
 }
 
 

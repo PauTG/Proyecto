@@ -1,19 +1,52 @@
-<div class="container education">
-  <div class="row skil">
+<div class="container-fluid proyectito" id="IdEducacion">
+  <div class="row skil rowcito">
     <div class="col-sm-4">
-      <h3>Educacion</h3>
+      <h1 class="card-title proyectito2"> Educacion</h1>
     </div>
     <div class="col-sm-8">
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odit, laboriosam labore possimus quis
+        praesentium autem corporis aspernatur repellat voluptas nam nisi ipsam, iste earum vitae ipsa temporibus sunt
+        enim.</p>
+    </div>
+    <div>
+    </div>
+    <!-- <button class="btn btn" (click)="Agregar()"> Agregar +</button> -->
+
+    <!-- <button class="btn btn-warning" (click)="Delete(estudio)"></button> -->
+    <div class="cardito" *ngFor="let estudio of estudios">
+      <label> {{estudio.establecimiento}}</label>
       <br>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis maxime tenetur vero dolorem ad dolore
-        fuga
-        modi vitae doloribus placeat corrupti obcaecati reiciendis sunt inventore expedita itaque maiores, vel
-        dolores!
-      </p>
-      <div class="buton">
-      <i class="fa-solid fa-trash "></i>
-      <i class="fa-solid fa-pencil " data-bs-toggle="modal" data-bs-target="#ExperienciaModal"></i>
+      <label> {{estudio.puesto}} </label>
+      <br>
+      <label> {{estudio.logro}} </label>
+      <br>
+      <br>
+      <button class="btn btn" (click)="Editar(estudio)"><i class="fa-solid fa-pencil"></i></button>
     </div>
   </div>
-</div>
+
+
+
+
+  <!-- MODAL DE ELIMINAR -->
+
+  <div class="modal fade" id="exampleModalDeleteEducacion" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Eliminar Skill</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer" *ngFor="let estudio of estudios">
+          <picture>
+            <img src="{{estudio.establecimiento}}" alt="Logos" id="logos" accept="image/*" />
+          </picture>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+          <button (click)="Delete(estudio)" class="btn btn-warning borrar">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

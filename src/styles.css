@@ -57,35 +57,36 @@ margin-right: 15px;
 }
 
 .skil{
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px E7CACA;
     overflow: hidden;
     border-radius: 15px;
     margin-top: 1.5rem;
-    background-color: rosybrown;
+    background-color: C9A0A0;
+
   }
 
   .education{
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px E7CACA;
     overflow: hidden;
     border-radius: 15px;
     margin-top: 1.5rem;
-    background-color: rosybrown;
+    background-color: C9A0A0;
   }
 
   .experiencita{
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px E7CACA;
     overflow: hidden;
     border-radius: 15px;
     margin-top: 1.5rem;
-    background-color: rosybrown;
+    background-color: C9A0A0;
   }
 
   .proyectito {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px E7CACA;
     overflow: hidden;
     border-radius: 15px;
     margin-top: 1.5rem;
-    background-color: rosybrown;
+    background-color: C9A0A0;
     text-align: center;
 
   }
@@ -96,7 +97,7 @@ margin-right: 15px;
 
 }
 
-img{
+/* img{
     width: 150px;
     height: 150;
-}
+} */

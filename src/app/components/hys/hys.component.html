@@ -1,9 +1,9 @@
-<div class="container tecno">
+<div class="container-fluid tecno" id="IdTecnologias">
   <div class="row skil">
-    <div class="col-8 text-center">
-      <h3>Tecnologías</h3>
+    <div class="col-4 text-center tecno">
+      <h1>Tecnologías</h1>
     </div>
-    <div class="col-4 justify-content-center">
+    <div class="col-8 justify-content-center">
       <p>
       <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img
           src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg"
@@ -26,14 +26,14 @@
   <!-- Muestro las skills y las imagenes de los lenguajes / tecnologias -->
 
 
-  <div *ngFor="let skill of skills" class="container skil">
+  <div *ngFor="let skill of skills" class="container proyectito">
     <div class="row ">
       <div class="col-4">
         <span class="header">
           <h3> {{skill.nombre}} </h3>
         </span>
       </div>
-      <div class="col-8">
+      <div class="col-4">
         <picture>
           <img src="{{skill.img}}" alt="Logos" id="logos" accept="image/*" />
         </picture>

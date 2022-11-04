@@ -2,29 +2,25 @@
 
 
 <app-header></app-header>
-
-
-<div class="container skil">
-  <div>
-    <button class="btn btn" (click)="Agregar()"> Agregar +</button>
-    <div class="cardito" *ngFor="let persona of personas">
-      <div>
-        <h3 class="card-title">Sobre mi</h3>
-      </div>
-      <label> {{persona.nombre}}</label>
-      <br>
-      <label> {{persona.apellido}} </label>
-      <br>
-      <label> {{persona.titulo}} </label>
-      <br>
-      <img src="{{persona.img}}" accept="image/*">
-      <br>
-      <button class="btn btn" (click)="Editar(persona)"><i class="fa-solid fa-pencil"></i></button>
+<div class=" container skil">
+<div class="row perfilc" *ngFor="let persona of personas">
+  <div class="col-md-8">
+        <h1 class="card-title">Sobre mi</h1>
+      <h5> {{persona.nombre}}</h5>
+      
+      <h5> {{persona.apellido}} </h5>
+      
+      <h5> {{persona.titulo}} </h5>
     </div>
-  </div>
-
+      <div class="col-md-4">
+      
+        <img class="perfil img-fluid" src="{{persona.img}}" accept="image/*">
+        
+        <button *ngIf="isAdmin" class="btn btn" (click)="Editar(persona)"><i class="fa-solid fa-pencil"></i></button>
+      </div>
+    
 </div>
-
+</div>
 
 
 <app-educacion></app-educacion>

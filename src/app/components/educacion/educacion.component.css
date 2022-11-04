@@ -5,24 +5,25 @@
 
 
 
-    h2 {
-    text-align: left;
+h2 {
+    text-align: center;
     color: black;
     margin-left: 15px;
 
-     }
+}
 
 
-     p {
+/* p {
   display: block;
     color: black;
     font-size:large;
     text-align: right;
-    }
-    
-.col-sm-4{
+    } */
+
+.col-sm-4 {
     text-align: center;
     margin: 15px 0px;
+    color: black;
 
     /* margin-bottom: 15px; */
     padding: 0px 12px;
@@ -31,6 +32,14 @@
 
 .col-sm-8 {
     padding: 0px 12px;
+    text-align: center;
+    color: black;
+
+}
+.educlass {
+    text-align: center;
+    align-items: center;
+
 }
 
 .buton {
@@ -40,10 +49,31 @@
 }
 
 .proyectito2 {
-    text-align: left;
+    text-align: center;
+    
 }
 
 .rowcito {
     margin: 0px 12px;
-    padding: 12px;
+    
+}
+
+/* p {
+    text-align: center;
+    color: black;
+} */
+
+h6 {
+    text-align: center;
+    color: black;
+}
+
+h1 {
+    border-right: 1px solid black;
+    margin-left: 15px; 
+    padding: 2rem;
+}
+
+.columnitaeduc {
+    padding-top: 2rem;
 }

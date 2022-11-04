@@ -1,52 +1,47 @@
-<div class="container-fluid proyectito" id="IdEducacion">
-  <div class="row skil rowcito">
-    <div class="col-sm-4">
+<div class="container proyectito" id="IdEducacion">
+  <div class="row skil d-flex justify-content-between rowcito">
+    <div class="col-md-4">
       <h1 class="card-title proyectito2"> Educacion</h1>
     </div>
-    <div class="col-sm-8">
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odit, laboriosam labore possimus quis
-        praesentium autem corporis aspernatur repellat voluptas nam nisi ipsam, iste earum vitae ipsa temporibus sunt
-        enim.</p>
-    </div>
-    <div>
-    </div>
-    <!-- <button class="btn btn" (click)="Agregar()"> Agregar +</button> -->
+    <div class="col-md-8 columnitaeduc">
+      <div>
+       
 
-    <!-- <button class="btn btn-warning" (click)="Delete(estudio)"></button> -->
-    <div class="cardito" *ngFor="let estudio of estudios">
-      <label> {{estudio.establecimiento}}</label>
-      <br>
-      <label> {{estudio.puesto}} </label>
-      <br>
-      <label> {{estudio.logro}} </label>
-      <br>
-      <br>
-      <button class="btn btn" (click)="Editar(estudio)"><i class="fa-solid fa-pencil"></i></button>
-    </div>
-  </div>
-
-
-
-
-  <!-- MODAL DE ELIMINAR -->
-
-  <div class="modal fade" id="exampleModalDeleteEducacion" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Eliminar Skill</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div *ngFor="let estudio of estudios">
+          <h2> {{estudio.establecimiento}}</h2>
+          <br>
+          <h6> {{estudio.logro}} </h6>
+          <br>
+          <h6> {{estudio.fecha}} </h6> 
+          <br>
+          <br>
+          <button *ngIf="isAdmin" class="btn btn" (click)="Editar(estudio)"><i class="fa-solid fa-pencil"></i></button>
         </div>
-        <div class="modal-footer" *ngFor="let estudio of estudios">
-          <picture>
-            <img src="{{estudio.establecimiento}}" alt="Logos" id="logos" accept="image/*" />
-          </picture>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
-          <button (click)="Delete(estudio)" class="btn btn-warning borrar">Eliminar</button>
+
+        <button *ngIf="isAdmin" class="btn borrar bot" data-bs-toggle="modal"
+          data-bs-target="#exampleModalDeleteEducacion">
+          <i class="fas fa-trash"></i> </button>
+          <button *ngIf="isAdmin" class="btn btn" (click)="Agregar()"><i class="far fa-plus-square"></i></button>
+      </div>
+
+
+      <!-- MODAL DE ELIMINAR -->
+
+      <div class="modal fade" id="exampleModalDeleteEducacion" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Eliminar educacion</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer" *ngFor="let estudio of estudios">
+              <p>{{estudio.establecimiento}}</p>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+              <button (click)="Delete(estudio)" class="btn btn-warning borrar">Eliminar</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-</div>
+    </div>

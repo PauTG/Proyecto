@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Skill } from 'src/app/Modelos/Skill';
 import { SkillService } from 'src/app/Servicios/skill.service';
+import { TokenService } from 'src/app/Servicios/token.service';
 
 @Component({
   selector: 'app-hys',
@@ -12,8 +13,11 @@ export class HysComponent implements OnInit {
 
 skills:Skill[]=[];
 skill: Skill = new Skill(0,"",0,"");
+isAdmin = false;
+roles: string[];
 
-  constructor(private router: Router, private service: SkillService) { }
+
+  constructor(private router: Router, private service: SkillService , private tokenService: TokenService ) { }
 
   ngOnInit(): void {
     this.service.getSkill()
@@ -21,6 +25,12 @@ skill: Skill = new Skill(0,"",0,"");
         this.skills = data
         ;
       })
+      this.roles = this.tokenService.getAuthorities();
+      this.roles.forEach(rol => {
+        if (rol === 'ROLE_ADMIN') {
+          this.isAdmin = true;
+        }
+      });
   }
 
   Nuevo(){

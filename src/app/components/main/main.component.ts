@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Persona } from 'src/app/Modelos/Persona';
 import { PersonaService } from 'src/app/Servicios/persona.service';
+import { TokenService } from 'src/app/Servicios/token.service';
 
 @Component({
   selector: 'app-main',
@@ -13,15 +14,22 @@ export class MainComponent implements OnInit {
   personas: Persona[] = [];
  
   persona: Persona = new Persona (0, "", "", "", "");
+  isAdmin = false;
+  roles: string[];
 
 
-
-  constructor(private router: Router, private service: PersonaService) { }
+  constructor(private router: Router, private service: PersonaService , private tokenService: TokenService) { }
   ngOnInit(): void {  
     this.service.getPersona()
       .subscribe(data => {
         this.personas = data;
       })
+      this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach(rol => {
+      if (rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
   }
   
   

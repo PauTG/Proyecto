@@ -1,19 +1,47 @@
-<div class="container-fluid proyectito" id="IdExperiencia">
-  <div class="row skil">
-    <div class="col-sm-4">
-      <h1>Experiencia laboral</h1>
+
+<div class="container text-center proyectito" id="IdExperiencia">
+  <div class="row d-flex justify-content-between">
+    <div class="col-md-4">
+      <div class="exp">
+        <h1 class="p-3">Experiencia laboral</h1>
+        
+      </div>
     </div>
-    <div class="col-sm-8">
+    <div *ngFor="let experiencia of experiencias" class="col-md-8 justify-content-center align-items-center exp2">
       <br>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis maxime tenetur vero dolorem ad dolore
-        fuga
-        modi vitae doloribus placeat corrupti obcaecati reiciendis sunt inventore expedita itaque maiores, vel
-        dolores!
-      </p>
-      <div class="buton">
-      <i class="fa-solid fa-trash "></i>
-      <i class="fa-solid fa-pencil " data-bs-toggle="modal" data-bs-target="#ExperienciaModal"></i>
-    </div>
+        <h2> {{experiencia.nombre}}</h2>
+        <br>
+        <h6> {{experiencia.fecha}} </h6>
+        <br>
+        <h6> {{experiencia.puesto}} </h6>
+        <br>
+        <button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar bot"><i class="far fa-plus-square"></i></button>
+        <button *ngIf="isAdmin" (click)="Editar(experiencia)" class="btn editar">
+          <i class="fa-solid fa-pencil"></i>
+        </button>
+        <button *ngIf="isAdmin" class="btn borrar bot" data-bs-toggle="modal" data-bs-target="#experienciaBorrar">
+          <i class="fa-solid fa-trash "></i>
+        </button>
+      </div>
+
+  </div>
+
+<div class="modal fade" id="experienciaBorrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="but">
+          <h5 class="modal-title" id="exampleModalLabel">Eliminar experiencia</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="modal-footer" *ngFor="let experiencia of experiencias">
+        <p>{{experiencia.nombre}}</p>
+        <div class="bot">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+          <button (click)="Delete(experiencia)" class="btn btn-warning borrar">Eliminar</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,18 +1,18 @@
 export class Experiencia {
     id: number;
-    establecimiento: String;
-    logro: String;
+    nombre: String;
+    puesto: String;
     fecha: String;
    
 
 
-    constructor(id: number, establecimiento: String,
-        logro: String,
+    constructor(id: number, nombre: String,
+        puesto: String,
         fecha: String) {
 
         this.id = id;
-        this.establecimiento = establecimiento;
-        this.logro = logro;
+        this.nombre = nombre;
+        this.puesto = puesto;
         this.fecha = fecha;
        
     }

@@ -7,20 +7,20 @@
         <form action="">
           <div class="row">
             <div class="form-group">
-              <label for="">Nombre:</label>
+              <label for="">Establecimiento:</label>
               <input [(ngModel)]="estudio.establecimiento" name="nombre" type="text" class="form-control">
             </div>
           </div>
           <div class="row">
             <div class="form-group">
-              <label for="">Puesto:</label>
-              <input [(ngModel)]="estudio.puesto" name="puesto" type="text" class="form-control" />
+              <label for="">Logro:</label>
+              <input [(ngModel)]="estudio.logro" name="logro" type="text" class="form-control" />
             </div>
           </div>
           <div class="row">
-            <div class="form-group">
-              <label for="">Logro:</label>
-              <input [(ngModel)]="estudio.logro" name="fecha" type="text" class="form-control" />
+            <div class="form-grop">
+              <label for="">Fecha:</label>
+              <input [(ngModel)]="estudio.fecha" name="fecha" type="text" class="form-control" />
             </div>
           </div>
           <button (click)="Actualizar(estudio)" class="btn btn-danger">Actualizar</button>

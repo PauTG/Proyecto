@@ -1,22 +1,22 @@
 .proyectito {
     color: black;
     text-align: center;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     margin-bottom: 15px;
     /* padding: 10px; */
 }
 h1 {
     text-align: center;
+    padding: 16px;
     border-right: 1px solid black;
-    margin-left: 15px;
-
+    /* margin-left: 15px; */
  }
 
  
 .titulo{
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
    
 }
 
@@ -25,12 +25,9 @@ h1 {
 }
 
 
-.col-sm-4 {
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
+/* 
 p {
 line-height: normal;
-padding: 20px;
 margin: 10px;
-}
+} */
+

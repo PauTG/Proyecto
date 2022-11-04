@@ -1,54 +1,52 @@
-<div class="container-fluid tecno" id="IdTecnologias">
+<div class="container d-flex flex-column" id="IdTecnologias">
   <div class="row skil">
-    <div class="col-4 text-center tecno">
+    <div class="col-md-12">
+      <div class="text-center tecnito">
       <h1>Tecnologías</h1>
     </div>
-    <div class="col-8 justify-content-center">
-      <p>
-      <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img
-          src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg"
-          width="36" height="36" alt="HTML5" /></a>
-      <a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img
-          src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg"
-          width="36" height="36" alt="CSS3" /></a>
-      <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"><img
-          src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg"
-          width="36" height="36" alt="Bootstrap" /></a>
-      </p>
-      <button (click)="Nuevo()" class="btn agregar bot"><i class="far fa-plus-square"></i></button>
-      <button class="btn borrar bot" data-bs-toggle="modal" data-bs-target="#exampleModalDelete"><i
-          class="fas fa-trash"></i></button>
+    </div>
+    
+      <div class="bot">
+      <button *ngIf="isAdmin"(click)="Nuevo()" class="btn agregar bot"><i class="far fa-plus-square"></i></button>
+      <button *ngIf="isAdmin" class="btn borrar bot" data-bs-toggle="modal" data-bs-target="#exampleModalDelete"><i
+          class="fas fa-trash"></i> </button>
     </div>
   </div>
 
-
+<!-- </div> -->
 
   <!-- Muestro las skills y las imagenes de los lenguajes / tecnologias -->
 
 
-  <div *ngFor="let skill of skills" class="container proyectito">
-    <div class="row ">
-      <div class="col-4">
+  <div class="row d-flex flex-row proyectito">
+      <div *ngFor="let skill of skills" class="col-md-4">
         <span class="header">
           <h3> {{skill.nombre}} </h3>
         </span>
-      </div>
-      <div class="col-4">
-        <picture>
-          <img src="{{skill.img}}" alt="Logos" id="logos" accept="image/*" />
-        </picture>
-        <circle-progress [percent]="skill.progress" [radius]="100" [imageSrc]="'../assets/imagen_html.png'"
-          [showImage]="true" [imageHeight]="90" [imageWidth]="90" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
-          [outerStrokeColor]="'rgb(36,0,32)'" [innerStrokeColor]="'rgba(222,0,255,1)'" [animation]="true"
+        <circle-progress [percent]="skill.progress" 
+        [radius]="100" 
+        [imageSrc]="skill.img" 
+        [showImage]="true"
+          [imageHeight]="90" 
+          [imageWidth]="90" 
+          [showUnits]="false"
+          [showSubtitle]="false"
+          [outerStrokeWidth]="16" 
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'rgb(36,0,32)'" 
+          [innerStrokeColor]="'rgba(222,0,255,1)'" 
+          [animation]="true"
           [animationDuration]="200">
         </circle-progress>
         <span class="footer">
-          <button (click)="Editar(skill)" class="btn editar"><i class="fas fa-edit"></i></button>
+          <button *ngIf="isAdmin" (click)="Editar(skill)" class="btn editar"><i class="fas fa-edit"></i></button>
         </span>
       </div>
-    </div>
-  </div>
-
+        <!-- <picture>
+          <img src="{{skill.img}}" alt="Logos" id="logos" accept="image/*" />
+        </picture> -->
+        
+      </div>
 
 
   <!-- Muestro las skills y las imagenes de los lenguajes / tecnologias -->
@@ -63,15 +61,19 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
+          <div class="but">
           <h5 class="modal-title" id="exampleModalLabel">Eliminar Skill</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+      </div>
         <div class="modal-footer" *ngFor="let skill of skills">
           <picture>
             <img src="{{skill.img}}" alt="Logos" id="logos" accept="image/*" />
           </picture>
+          <div class="bot">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
           <button (click)="Delete(skill)" class="btn btn-warning borrar">Eliminar</button>
+        </div>
         </div>
       </div>
     </div>

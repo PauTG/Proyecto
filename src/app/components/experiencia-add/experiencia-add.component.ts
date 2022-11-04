@@ -18,7 +18,7 @@ export class ExperienciaAddComponent implements OnInit {
   }
 
 Guardar() {
-  this.service.createExperiencia(this.experiencia).subscribe(data => {});
+  this.service.createExperiencia(this.experiencia).subscribe(data => { this.experiencia=data});
   this.route.navigate(['home']);
 }
 

@@ -1,7 +1,4 @@
 
-
-
-
 body {
     background-color: #BC8F8F;
     opacity: 1;
@@ -10,6 +7,10 @@ body {
     box-sizing: border-box;
     
 }
+
+
+
+
 
 /* 
 body {
@@ -31,9 +32,7 @@ p {
     flex: display;
 }
 
-.cardito {
-    color: black;
-}
+
 
 /* .botoncito {
     float: right;
@@ -62,6 +61,8 @@ margin-right: 15px;
     border-radius: 15px;
     margin-top: 1.5rem;
     background-color: C9A0A0;
+    text-align: center;
+    
 
   }
 

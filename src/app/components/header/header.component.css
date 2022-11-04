@@ -53,18 +53,33 @@ a:hover{
 
 
 .navbar {
-    border-radius: 40%;
+    border-radius: 50%;
 
 }
 
-.loginazo {
+/* .loginazo {
  height: 35px;
  margin-right: 20px;
  color: white;
  background-color: #C9A0A0;
- border-color: #FBC3BC;
- -o-border-image: auto; }
+ border-color: #FBC3BC;} */
 
  .navcolor {
     column-rule-color: white;
  }
+
+.logi{   
+    margin-right: 20px;
+    background-color: rosybrown;
+    border-color: white;
+    
+
+ }
+.login {
+    justify-content: space-around;
+}
+
+.loginito {
+    display: inline-flex;
+    align-items: center;
+}
